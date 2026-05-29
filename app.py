@@ -81,26 +81,16 @@ try:
     nx.draw(G, with_labels=True, node_size=50, font_size=8, ax=ax)
     st.pyplot(fig)
 
-    # 6. GEOGRAPHIC (BONUS - Butuh kolom 'lat' dan 'lon' di CSV Anda)
-    st.markdown("### 🌍 6. Visualisasi Geografis")
-    if 'lat' in df.columns and 'lon' in df.columns:
-        m = folium.Map(location=[-2.5, 118], zoom_start=4)
-        for _, row in df.iterrows():
-            folium.Marker([row['lat'], row['lon']], popup=row['title']).add_to(m)
-        st_folium(m, width=700)
-    else:
-        st.info("Peta belum muncul karena data belum memiliki kolom 'lat' dan 'lon'. Abaikan jika memang tidak ada data lokasi.")
-
-    # 7. AI SUMMARY (WAJIB 5)
+     # 6. AI SUMMARY (WAJIB 5)
     st.markdown("### 🤖 7. AI Summary")
     if st.button("Generate Ringkasan"):
         st.success("Berdasarkan analisis, wacana Islamphobia pada konflik AS-Iran di media YouTube didominasi oleh narasi propaganda negatif. Media besar cenderung membingkai isu ini sebagai ancaman keamanan.")
 
-    # 8. TABEL (WAJIB 6)
+    # 7. TABEL (WAJIB 6)
     st.markdown("### 🗂️ 8. Data Mentah")
     st.dataframe(df)
 
-    # 9. METODOLOGI (WAJIB 7)
+    # 8. METODOLOGI (WAJIB 7)
     st.markdown("---")
     st.markdown("**Metodologi:** Dashboard ini menggunakan Python Streamlit. Sentimen dianalisis dengan metode berbasis kamus kata (Lexicon-based).")
 
