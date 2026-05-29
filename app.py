@@ -11,7 +11,7 @@ st.subheader("Topik: Mewacanakan Islamphobia pada Konflik AS–Iran di YouTube")
 @st.cache_data
 def load_data():
     # Pastikan nama file sama persis dengan yang ada di folder Anda
-    return pd.read_csv("dataset_youtube-scraper_2026-05-25_13-14-14-635.xlsx - Data.csv")
+    return pd.read_csv("data.csv")
 
 try:
     df = load_data()
