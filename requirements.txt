@@ -2,3 +2,8 @@ streamlit
 pandas
 matplotlib
 openpyxl
+scikit-learn
+networkx
+pyvis
+streamlit-folium
+folium
